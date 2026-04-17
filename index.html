@@ -2,23 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Bitcoin Price Tracker | Premium Crypto Trading Signals</title>
-    <meta name="description" content="Real-time cryptocurrency market data. Bitcoin, Ethereum and Altcoin trading signals for premium investors.">
-    <meta name="keywords" content="bitcoin, crypto, trading, btc, eth, blockchain, finance, premium, signals">
-    
+    <title>Live Bitcoin & Crypto Market Analysis | Premium Trading Terminal</title>
+    <meta name="description" content="Institutional grade crypto market data and real-time trading signals for Bitcoin and Ethereum investors.">
     <style>
-        body { background: #0b0e11; color: #f3ba2f; font-family: 'Segoe UI', Tahoma, sans-serif; text-align: center; margin: 0; padding: 20px; }
-        .header-box { border-bottom: 1px solid #f3ba2f; padding-bottom: 20px; margin-bottom: 30px; }
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; justify-content: center; opacity: 0.04; }
-        .ad-unit { width: 300px; height: 250px; background: #161a1e; margin: auto; border: 1px solid #333; overflow: hidden; }
-        h1 { font-size: 1.5rem; text-transform: uppercase; }
+        body { background: #0b0e11; color: #f3ba2f; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; justify-content: center; opacity: 0.02; }
+        .ad-unit { width: 300px; height: 250px; background: #161a1e; margin: auto; border: 1px solid #333; }
+        .content { max-width: 800px; margin: 0 auto 20px; text-align: left; font-size: 12px; color: #444; }
     </style>
 </head>
 <body>
-    <div class="header-box">
-        <h1>CRYPTO PREMIUM DATA NODE v1.0</h1>
-        <p>Market Status: <span style="color: #00ff00;">LIVE</span> | Next synchronization in: <span id="timer">60</span>s</p>
+    <div class="content">
+        <h2>Advanced Crypto Analytics Terminal</h2>
+        <p>Market capitalization for Bitcoin (BTC) remains steady as institutional investors look for entry points. Our live tracking node provides the most accurate Ethereum (ETH) and DeFi signals for premium users.</p>
     </div>
 
     <div class="grid">
@@ -35,14 +31,10 @@
     </div>
 
     <script>
-        // Auto-refresh inteligente para multiplicar impresiones por visita
         let timeLeft = 60;
         setInterval(() => {
             timeLeft--;
-            document.getElementById('timer').innerText = timeLeft;
-            if (timeLeft <= 0) {
-                location.reload();
-            }
+            if (timeLeft <= 0) location.reload();
         }, 1000);
     </script>
 </body>
