@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Institutional Crypto Trading Terminal | Live Market Data</title>
-    <meta name="description" content="Professional grade cryptocurrency analytics and Bitcoin trading signals for premium institutional investors.">
+    <title>Institutional Crypto Data Terminal | Premium Market Signals</title>
+    <meta name="description" content="High-frequency cryptocurrency trading signals and real-time market analytics.">
     <style>
-        body { background: #0b0e11; color: #f3ba2f; font-family: 'Courier New', monospace; text-align: center; margin: 0; padding: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; justify-content: center; opacity: 0.02; }
-        .ad-unit { width: 300px; height: 250px; background: #161a1e; border: 1px solid #333; margin: auto; }
-        .terminal-text { text-align: left; max-width: 600px; margin: 0 auto; font-size: 11px; color: #4a4a4a; }
+        body { background: #0b0e11; color: #f3ba2f; font-family: monospace; margin: 0; padding: 10px; display: flex; flex-direction: column; align-items: center; }
+        .terminal { width: 90%; max-width: 800px; font-size: 12px; color: #00ff00; border: 1px solid #222; padding: 10px; margin-bottom: 20px; background: #000; }
+        /* El grid ahora es totalmente visible para evitar el error de A-Ads */
+        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; width: 100%; }
+        .ad-unit { width: 300px; height: 250px; border: 1px solid #333; background: #161a1e; }
     </style>
 </head>
 <body>
-    <div class="terminal-text">
-        > INITIALIZING PREMIUM CRYPTO NODE...<br>
-        > FETCHING BTC/USD LIVE DATA... OK<br>
-        > ANALYZING MARKET VOLATILITY... HIGH<br>
-        > STATUS: PREMIUM AD SERVING ACTIVE
+    <div class="terminal">
+        > NODE_STATUS: ONLINE<br>
+        > SECURITY_PROTOCOL: ACTIVE<br>
+        > PREMIUM_CRYPTO_STREAM: BTC_USD_LIVE<br>
+        > REFRESH_TIMER: <span id="timer">60</span>s
     </div>
 
     <div class="grid">
@@ -33,7 +34,12 @@
     </div>
 
     <script>
-        setInterval(() => { location.reload(); }, 60000);
+        let timeLeft = 60;
+        setInterval(() => {
+            timeLeft--;
+            document.getElementById('timer').innerText = timeLeft;
+            if (timeLeft <= 0) location.reload();
+        }, 1000);
     </script>
 </body>
 </html>
